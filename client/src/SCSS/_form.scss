@@ -1,0 +1,39 @@
+.form-box{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 2rem;
+}
+
+.alert{
+    text-align: center;
+    color: #fff;
+    background-color: red;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 900px){
+    .form-box{
+        width: 60%;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 650px){
+    .form-box{
+        width: 70%;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 450px){
+    .form-box{
+        width: 100%;
+        padding: 0.9rem;
+    }
+}

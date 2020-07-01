@@ -1,0 +1,58 @@
+nav{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: $bg;
+    color: $text-color;
+    height: 10vh;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+}
+
+.miniProfile{
+    position: absolute;
+    z-index : 2;
+    top: 10vh;
+    right : 0;
+    width : 20%;
+    text-align: center;
+
+    img{
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 900px){
+    nav{
+        height: 12vh;
+    }
+    
+    .miniProfile{
+        top: 12vh;
+        width: 30%;
+    }    
+}
+
+@media (max-width: 750px){
+    .miniProfile{
+        width : 40%;
+    }    
+}
+
+@media (max-width: 500px){
+    nav{
+        height: 15vh;
+    }
+    
+    .miniProfile{
+        top: 15vh;
+        width: 50%;
+    }        
+}
+
+@media (max-width: 300px){
+    .miniProfile{
+        width : 100%;
+    }    
+}
