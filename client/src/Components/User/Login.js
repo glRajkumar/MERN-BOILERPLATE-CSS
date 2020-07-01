@@ -53,44 +53,38 @@ const Login = () => {
             </div>
         }
 
-        <div>
-            <div>
-                <label htmlFor="email"> Email </label>
-                <input
-                    className="input-box"
-                    ref={emailRef}
-                    onKeyDown={emailKeyDown} 
-                    name="email"
-                    type="email"
-                    value={email}
-                    onChange={eonChange}
-                />
-            </div>
-            { 
-            eerr && <div className="alert"> {emsg} </div>                        
-            }
+        <label htmlFor="email"> Email </label>
+        <input
+            className="input-box"
+            ref={emailRef}
+            onKeyDown={emailKeyDown} 
+            name="email"
+            type="email"
+            value={email}
+            onChange={eonChange}
+        />
+        { 
+        eerr && <div className="alert"> {emsg} </div>                        
+        }
 
-            <div>
-                <label htmlFor="password"> Password </label>
-                <input
-                    className="input-box"
-                    ref={passRef}
-                    onKeyDown={passKeyDown} 
-                    name="password"
-                    type="password"
-                    value={password}
-                    onChange={ponChange}
-                />
-            </div>
-            { 
-            perr && <div className="alert"> {pmsg} </div>                        
-            }
-            
-            <button
-                ref={SubRef} 
-                onClick={onSubmit}
-            >Submit</button>
-        </div>
+        <label htmlFor="password"> Password </label>
+        <input
+            className="input-box"
+            ref={passRef}
+            onKeyDown={passKeyDown} 
+            name="password"
+            type="password"
+            value={password}
+            onChange={ponChange}
+        />
+        { 
+        perr && <div className="alert"> {pmsg} </div>                        
+        }        
+        
+        <button
+            ref={SubRef} 
+            onClick={onSubmit}
+        >Submit</button>
 
         <h4>Don't have an account, <Link to="/signup">Sigh Up</Link></h4>
     </div>

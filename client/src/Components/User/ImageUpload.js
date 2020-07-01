@@ -47,8 +47,11 @@ function ImageUpload({headers, updatePic}) {
                     onChange={ e => setFile(e.target.files[0]) } 
                 />
             </div>
-            <button onClick={submit}>Submit</button>
 
+            <div>
+                <button onClick={submit}>Submit</button>
+            </div>
+            
             { progress > 0 && <ProgressBar progress={progress} />}
 
         </div>

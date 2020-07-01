@@ -32,14 +32,18 @@ function Profile() {
                 </button>
             }
             
-            <h5> <strong> Delete your account : </strong> </h5>  
-            <button onClick={deleteAcc}>
-                    Delete 
-            </button>
+            <h5> <strong> Delete your account : </strong> </h5>
+            <div>
+                <button onClick={deleteAcc}>
+                        Delete 
+                </button>
+            </div>  
             
-            <button onClick={logout}>
-                    Log Out
-            </button>
+            <div>
+                <button onClick={logout}>
+                        Log Out
+                </button>
+            </div>
         </div>
     )
 }
