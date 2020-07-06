@@ -13,13 +13,12 @@ function ImageUpload({headers, updatePic}) {
 
         const config = {
             headers,
-            header: { 'content-type': 'multipart/form-data',
-            onUploadProgress : progEvent => {
+            header: { 'content-type': 'multipart/form-data' },
+            onUploadProgress : progEvent => {   
                 let percent = Math.floor((progEvent.loaded * 100) / progEvent.total)
                 if (percent < 100) setProgress(percent)
                 if(percent === 100) setProgress(99) 
             } 
-        }
         }
 
         axios.post("/user/upload", formData, config)

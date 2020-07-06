@@ -96,26 +96,7 @@
     }
 }
 
-@-webkit-keyframes progress-bar-stripes {
-    from {
-        background-position: 1rem 0;
-    }
-    to {
-        background-position: 0 0;
-    }
-}
-
-@keyframes progress-bar-stripes {
-    from {
-        background-position: 1rem 0;
-    }
-    to {
-        background-position: 0 0;
-    }
-}
-
 .progress {
-    display: -ms-flexbox;
     display: flex;
     height: 1rem;
     overflow: hidden;
@@ -125,11 +106,8 @@
 }
 
 .progress-bar {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: center;
     justify-content: center;
     color: #fff;
     text-align: center;
@@ -139,9 +117,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-.progress-bar {
-    transition: none;
-}
+    .progress-bar {
+        transition: none;
+    }
 }
 
 .progress-bar-striped {
@@ -155,8 +133,26 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-.progress-bar-animated {
-    -webkit-animation: none;
-    animation: none;
+    .progress-bar-animated {
+        -webkit-animation: none;
+        animation: none;
+    }
 }
+
+@keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0;
+    }
+    to {
+        background-position: 0 0;
+    }
+}
+
+@-webkit-keyframes progress-bar-stripes {
+    from {
+        background-position: 1rem 0;
+    }
+    to {
+        background-position: 0 0;
+    }
 }

@@ -44,57 +44,57 @@ function NewPass({headers, updatePass}) {
     }
 
 return (
-    <div className="form-box">
-    <label htmlFor="password"> Old Password </label>
-    <input
-        className="input-box"
-        ref={oldPassRef}
-        onKeyDown={oldPassKeyDown} 
-        name="password"
-        type="password"
-        value={oldPass}
-        onChange={oldPonChange}
-    />
-    { 
-    operr && <div className="alert"> {opmsg} </div>                        
-    }
+    <div className="form-box" style={{width: '80%'}}>
+        <label htmlFor="password"> Old Password </label>
+        <input
+            className="input-box"
+            ref={oldPassRef}
+            onKeyDown={oldPassKeyDown} 
+            name="password"
+            type="password"
+            value={oldPass}
+            onChange={oldPonChange}
+        />
+        { 
+        operr && <div className="alert"> {opmsg} </div>                        
+        }
 
-    <label htmlFor="password"> New Password </label>
-    <input
-        className="input-box"
-        ref={newPassRef}
-        onKeyDown={newPassKeyDown} 
-        name="password"
-        type="password"
-        value={newPass}
-        onChange={newPonChange}
-    />
-    { 
-    nperr && <div className="alert"> {npmsg} </div>                        
-    }
+        <label htmlFor="password"> New Password </label>
+        <input
+            className="input-box"
+            ref={newPassRef}
+            onKeyDown={newPassKeyDown} 
+            name="password"
+            type="password"
+            value={newPass}
+            onChange={newPonChange}
+        />
+        { 
+        nperr && <div className="alert"> {npmsg} </div>                        
+        }
 
-    <label htmlFor="password"> Conform Password </label>
-    <input
-        className="input-box"
-        ref={conPassRef}
-        onKeyDown={conPassKeyDown} 
-        name="password"
-        type="password"
-        value={conPass}
-        onChange={conPonChange}
-    />
-    { 
-    cperr && <div className="alert"> {cpmsg} </div>                        
-    }
+        <label htmlFor="password"> Conform Password </label>
+        <input
+            className="input-box"
+            ref={conPassRef}
+            onKeyDown={conPassKeyDown} 
+            name="password"
+            type="password"
+            value={conPass}
+            onChange={conPonChange}
+        />
+        { 
+        cperr && <div className="alert"> {cpmsg} </div>                        
+        }
 
-    <button
-        ref={SubRef} 
-        onClick={onSubmit}
-    >Submit</button>
+        <button
+            ref={SubRef} 
+            onClick={onSubmit}
+        >Submit</button>
 
-    {
-    fail && <div className="alert"> Failed to Update. Try again.</div> 
-    }
+        {
+        fail && <div className="alert"> Failed to Update. Try again.</div> 
+        }
     </div>
 )
 }
